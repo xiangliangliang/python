@@ -1,0 +1,270 @@
+link_info
+  use :
+    Show link info
+  usage mode :
+    link_info
+  eg :
+    link_info
+
+--------------------------------------------------------------
+set_uart
+  use :
+    Set the parameters needed for serial port test
+  usage mode :
+    set_uart -t x1 -r x2 -s x3
+      x1 : Specify send file
+      x2 : Specify the file to receive data
+      x3 : Specified transmission rate(kbps)
+  eg :
+     set_uart -t sendfile -r recfile -s 30
+
+--------------------------------------------------------------
+start_uart
+  use :
+    Serial port starts sending
+  usage mode :
+    start_uart
+  eg :
+    start_uart
+
+--------------------------------------------------------------
+stop_uart
+  use :
+    Serial port end sending data
+  usage mode :
+    stop_uart
+  eg :
+    stop_uart
+
+--------------------------------------------------------------
+set_video
+  use :
+    Set the parameters needed for video port test
+  usage mode :
+    sky : 
+      set_video -t x1
+    grd : 
+      set_video
+      x1 : Specify send file
+  eg :
+    sky : 
+      set_video -t sendfile
+    grd : 
+      set_video
+
+--------------------------------------------------------------
+start_video
+  use :
+    Video port starts sending
+  usage mode :
+    start_video
+  eg :
+    start_video
+
+--------------------------------------------------------------
+stop_video
+  use :
+    Video port end sending data
+  usage mode :
+    stop_video
+  eg :
+    stop_video
+
+--------------------------------------------------------------
+select_freq_band
+  use :
+    Set frequency band interval
+  usage mode :
+    select_freq_band x1
+      x1 : 2.4G or 5.8G
+  eg :
+    select_freq_band 2.4G
+
+--------------------------------------------------------------
+band_switch_mode
+  use :
+    Set up frequency band switching mode
+  usage mode :
+    band_switch_mode x1
+      x1 : auto or manual
+  eg :
+    band_switch_mode manual
+
+--------------------------------------------------------------
+vt_link_Func
+  use :
+    Video channel connection function
+  usage mode :
+    vt_link_func x1
+      x1 : fixed or hopping
+  eg :
+    vt_link_func hopping
+
+--------------------------------------------------------------
+rt_link_func
+  use :
+    remote control channel connection function
+  usage mode :
+    rt_link_func x1
+      x1 : fixed or hopping
+  eg :
+    rt_link_func fixed
+
+--------------------------------------------------------------
+vt_test_mode
+  use :
+    The current mode is used to test the relevant parameters of video channel
+  usage mode :
+    vt test_mode x1
+      x1 : enter or exit
+  eg :
+    vt_test_mode enter
+
+--------------------------------------------------------------
+module_rematch
+  use :
+    Pairing of sending module and receiving module
+  usage mode :
+    module_rematch
+  eg :
+    module_rematch
+
+--------------------------------------------------------------
+mcs_switch_mode
+  use :
+    Set up MCS switching mode
+  usage mode :
+    mcs_switch_mode x1
+      x1 : auto or manual
+  eg :
+    mcs_switch_mode auto
+
+--------------------------------------------------------------
+set_rt_freq
+  use :
+    Fix the remote control channel at a frequency point
+   usage mode :
+    set_rt_freq x1 x2
+      x1 : 2.4G or 5.8G
+      x2 : data(double,eg:2440.5)
+  eg :
+    set_rt_freq 5.8G 5760.5
+
+--------------------------------------------------------------
+set_vt_freq
+  use :
+    Fix the video channel at a frequency point
+   usage mode :
+    set_vt_freq x1 x2
+      x1 : 2.4G or 5.8G
+      x2 : data(double,eg:2440.5)
+  eg :
+    set_vt_freq 5.8G 5760.5
+
+--------------------------------------------------------------
+set_vt_bandwidth
+  use :
+    Setting video channel bandwidth
+  usage mode :
+    set_vt_bandwidth x1
+      x1 : 10M or 20M
+  eg :
+    set_vt_bandwidth 10M
+
+--------------------------------------------------------------
+set_match_id
+  use :
+    Set the same id, two modules can be paired,
+    but failure after restart
+  usage mode :
+    set_match_id x1 x2 x3 x4 x5 x6 x7
+      x1,x2,x3,x4,x5,x6,x7 : data(unsigned char)
+  eg :
+    set_match_id 12 33 47 34 88 32 70
+
+--------------------------------------------------------------
+set_vt_qam
+  use :
+    Setting QAM mode of video channel,
+    the four models currently supported are:bpsk,qpsk,16qam,64qam
+  usage mode :
+    set_vt_qam x1
+      x1 : bpsk,qpsk,16qam or 64qam
+  eg :
+    set_vt_qam 16qam
+
+--------------------------------------------------------------
+set_vt_ldpc
+  use :
+    Setting LDPC rate of video channel,
+    the four rates currently supported are:1/2,2/3,3/4,5/6
+  usage mode :
+    set_vt_ldpc x1
+      x1 : 1/2,2/3,3/4 or 5/6
+  eg :
+    set_vt_ldpc 1/2
+
+--------------------------------------------------------------
+set_rt_qam
+  use :
+    Setting QAM mode of remote control channel,
+    the two models currently supported are:bpsk,qpsk
+  usage mode :
+    set_rt_qam x1
+      x1 : bpsk or qpsk
+  eg :
+    set_rt_qam bpsk
+
+--------------------------------------------------------------
+set_rt_ldpc
+  use :
+    Setting LDPC rate of remote control channel,
+    the two rates currently supported are:1/2,2/3
+  usage mode :
+    set_rt_ldpc x1
+      x1 : 1/2 or 2/3
+  eg :
+    set_rt_ldpc 1/2
+
+--------------------------------------------------------------
+set_wireless_power
+  use :
+    Set the wireless transmission power of the current module.
+  usage mode :
+    set_wireless_power x1 x2
+      x1 : data(under 2.4G mode,effective interval [1db - 27db])
+      x2 : data(under 5.8G mode,effective interval [1db - 27db])
+  eg :
+    set_wireless_power 13 15
+
+--------------------------------------------------------------
+set_sys_sleep_lever
+  use :
+    Set system sleep mode rating.
+  usage mode :
+    set_sys_sleep_lever x1
+      x1 : data(effective interval [0 - 3])
+  eg :
+    set_sys_sleep_lever 1
+
+--------------------------------------------------------------
+help
+  use :
+    show supported commands
+  usage mode :
+    help
+  eg :
+    help
+
+--------------------------------------------------------------
+exit
+  use :
+    exit commands test
+  usage mode :
+    exit
+  eg :
+    exit
+	
+	
+set_video -t Artosyn_Rel.264
+start_video
